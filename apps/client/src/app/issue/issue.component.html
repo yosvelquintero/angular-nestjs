@@ -1,0 +1,51 @@
+<div class="container">
+  <h2>Issue Tracker</h2>
+
+  <!-- Create New Issue Form -->
+  @if (!selectedIssue) {
+  <div class="form">
+    <h3>Create New Issue</h3>
+    <input type="text" [(ngModel)]="newIssue.title" placeholder="Title" />
+    <textarea
+      [(ngModel)]="newIssue.description"
+      placeholder="Description"
+    ></textarea>
+    <button (click)="createIssue()">Create</button>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+  } @else {
+  <!-- Edit Issue Form -->
+  <div class="edit-form">
+    <h3>Edit Issue</h3>
+    <input type="text" [(ngModel)]="selectedIssue.title" placeholder="Title" />
+    <textarea
+      [(ngModel)]="selectedIssue.description"
+      placeholder="Description"
+    ></textarea>
+    <button (click)="updateIssue()">Update</button>
+    <button class="delete" (click)="cancel()">Cancel</button>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+  }
+
+  <!-- List of Issues -->
+  <div class="issue-list">
+    <h3>Issues ({{ issues.length }})</h3>
+    <ul>
+      @for (issue of issues; track issue.id) {
+      <li>
+        <div class="issue-info">
+          <span class="issue-title">{{ issue.title }}</span>
+          <p class="issue-description">{{ issue.description }}</p>
+        </div>
+        <div class="issue-actions">
+          <button class="edit" (click)="selectIssue(issue)">Edit</button>
+          <button class="delete" (click)="deleteIssue(issue.id)">Delete</button>
+        </div>
+      </li>
+      }@empty {
+      <li class="empty">No issues found!</li>
+      }
+    </ul>
+  </div>
+</div>
