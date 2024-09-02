@@ -61,6 +61,7 @@ $text-color: #333;
   textarea {
     min-height: 100px;
     resize: vertical;
+    font-size: small;
   }
 
   button {
@@ -103,13 +104,35 @@ $text-color: #333;
 
     li {
       background-color: $issue-bg-color;
-      padding: 10px;
+      padding: 10px 10px 0 10px;
       border: 1px solid $border-color;
       border-radius: 4px;
       margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .issue-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 70%;
+
+        h3 {
+          margin: 0;
+        }
+
+        .issue-description {
+          font-size: small;
+          width: 90%;
+        }
+      }
+
+      .issue-description {
+        font-size: small;
+        width: 70%;
+      }
 
       .issue-actions {
         button {

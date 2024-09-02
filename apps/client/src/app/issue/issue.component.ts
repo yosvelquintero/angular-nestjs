@@ -31,6 +31,11 @@ export class IssueComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
+  selectIssue(issue: Issue): void {
+    this.selectedIssue = { ...issue };
+    this.errorMessage = '';
+  }
+
   loadIssues(): void {
     this.issueService
       .getIssues()
@@ -66,11 +71,6 @@ export class IssueComponent implements OnInit, OnDestroy {
           console.error('Error creating issue:', error);
         }
       );
-  }
-
-  selectIssue(issue: Issue): void {
-    this.selectedIssue = { ...issue };
-    this.errorMessage = '';
   }
 
   updateIssue(): void {
