@@ -70,6 +70,7 @@ export class IssueComponent implements OnInit, OnDestroy {
 
   selectIssue(issue: Issue): void {
     this.selectedIssue = { ...issue };
+    this.errorMessage = '';
   }
 
   updateIssue(): void {

@@ -79,6 +79,14 @@ $text-color: #333;
     }
   }
 
+  button.cancel {
+    background-color: #f44336;
+
+    &:hover {
+      background-color: #d32f2f;
+    }
+  }
+
   .error {
     color: $error-color;
     font-size: 14px;
