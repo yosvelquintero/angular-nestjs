@@ -44,7 +44,7 @@ export class AppService {
       ...issue,
     };
 
-    this.issues.push(newIssue);
+    this.issues = [newIssue, ...this.issues];
     return issue;
   }
 
