@@ -27,6 +27,7 @@
     "@angular/cli": "~18.2.0",
     "@angular/compiler-cli": "~18.2.0",
     "@angular/language-service": "~18.2.0",
+    "@nrwl/nest": "^19.6.4",
     "@nx/angular": "19.6.4",
     "@nx/eslint": "19.6.4",
     "@nx/eslint-plugin": "19.6.4",
