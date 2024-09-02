@@ -106,6 +106,7 @@ $text-color: #333;
       .issue-actions {
         button {
           padding: 6px 12px;
+          margin: 4px 2px;
           font-size: 12px;
 
           &.edit {
@@ -125,6 +126,16 @@ $text-color: #333;
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 600px) {
+    textarea {
+      width: 92%;
+    }
+
+    button {
+      width: 100%;
     }
   }
 }

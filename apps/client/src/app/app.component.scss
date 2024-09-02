@@ -14,3 +14,19 @@
     font-weight: 700;
   }
 }
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+
+  p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+}
