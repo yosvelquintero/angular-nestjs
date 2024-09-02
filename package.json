@@ -2,7 +2,13 @@
   "name": "@sitemate-challenge/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "client:dev": "nx run client:serve:development",
+    "client:prod": "nx run client:serve:production",
+    "client:build:dev": "nx run client:build:development",
+    "client:build:prod": "nx run client:build:production",
+    "client:test": "nx run client:test"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",
