@@ -1,8 +1,8 @@
 <div class="container">
   <h2>Issue Tracker</h2>
 
-  <!-- Create New Issue Form -->
   @if (!selectedIssue) {
+  <!-- Create New Issue Form -->
   <div class="form">
     <h3>Create New Issue</h3>
     <input type="text" [(ngModel)]="newIssue.title" placeholder="Title" />
@@ -11,7 +11,9 @@
       placeholder="Description"
     ></textarea>
     <button (click)="createIssue()">Create</button>
-    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    @if (errorMessage) {
+    <p class="error">{{ errorMessage }}</p>
+    }
   </div>
   } @else {
   <!-- Edit Issue Form -->
@@ -23,8 +25,10 @@
       placeholder="Description"
     ></textarea>
     <button (click)="updateIssue()">Update</button>
-    <button class="delete" (click)="cancel()">Cancel</button>
-    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <button class="cancel" (click)="cancel()">Cancel</button>
+    @if (errorMessage) {
+    <p class="error">{{ errorMessage }}</p>
+    }
   </div>
   }
 
