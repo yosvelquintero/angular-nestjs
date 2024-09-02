@@ -1,0 +1,47 @@
+### Sitemate Challenge API
+@hostname = localhost
+@port = 3000
+@api = api
+@host = http://{{hostname}}:{{port}}/{{api}}
+@contentType = application/json
+
+# ------------------------------------------------------------
+# App
+# ------------------------------------------------------------
+
+###
+### Get issues
+###
+
+GET  {{host}}/issues
+Content-Type: {{contentType}}
+
+###
+### Create issue
+###
+
+POST  {{host}}/issues
+Content-Type: {{contentType}}
+
+{
+  "title": "Issue 1",
+  "description": "Description 1"
+}
+
+###
+### Update issue
+###
+
+PUT  {{host}}/issues/d4e4a3f5-2b97-4fcb-bb39-1c23e85e0a14
+Content-Type: {{contentType}}
+
+{
+  "title": "Bug in login functionality [Updated]"
+}
+
+###
+### Delete issue
+###
+
+DELETE  {{host}}/issues/d4e4a3f5-2b97-4fcb-bb39-1c23e85e0a14
+Content-Type: {{contentType}}
