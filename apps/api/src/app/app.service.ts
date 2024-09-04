@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 
-import { Issue } from '@sitemate-challenge/types';
+import { Issue } from '@an-challenge/types';
 
 @Injectable()
 export class AppService {

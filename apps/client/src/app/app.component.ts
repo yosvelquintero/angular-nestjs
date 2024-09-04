@@ -9,5 +9,5 @@ import { IssueComponent } from './issue/issue.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  appName = 'Sitemate Challenge';
+  appName = 'Angular NestJS Challenge';
 }

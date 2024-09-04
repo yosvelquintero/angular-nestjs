@@ -9,7 +9,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 
-import { Issue } from '@sitemate-challenge/types';
+import { Issue } from '@an-challenge/types';
 
 import { AppService } from './app.service';
 
