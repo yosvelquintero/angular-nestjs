@@ -1,16 +1,15 @@
 {
-  "name": "@an/source",
+  "name": "@nxan/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "client:serve:dev": "nx run client:serve:development",
     "client:serve:prod": "nx run client:serve:production",
-    "client:build:dev": "nx run client:build:development",
-    "client:build:prod": "nx run client:build:production",
+    "client:build:dev": "nx run client:build --configuration=development",
+    "client:build:prod": "nx run client:build --configuration=production",
     "api:serve:dev": "nx run api:serve:development",
     "api:serve:prod": "nx run api:serve:production",
-    "api:build:dev": "nx run api:build:development",
-    "api:build:prod": "nx run api:build:production"
+    "api:build": "nx run api:build"
   },
   "private": true,
   "dependencies": {
