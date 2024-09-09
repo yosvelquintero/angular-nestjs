@@ -9,7 +9,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 
-import { Issue } from '@an-challenge/types';
+import { Issue } from '@an/types';
 
 import { AppService } from './app.service';
 

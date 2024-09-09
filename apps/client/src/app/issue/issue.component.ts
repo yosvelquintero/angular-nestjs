@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Issue } from '@an-challenge/types';
+import { Issue } from '@an/types';
 import { IssueService } from './issue.service';
 import { FormsModule } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
